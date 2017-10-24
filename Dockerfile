@@ -10,4 +10,6 @@ RUN apk --update upgrade && \
     apk del temporary && \
     rm -rf /var/cache/apk/* /tmp/iozone*
 
-CMD /bin/sh
+COPY files/iozone.sh iozone.sh
+
+CMD ./iozone.sh
